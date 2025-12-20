@@ -1,5 +1,18 @@
 {
   "nodes": {
+    "fastbuild": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1764411068,
+        "narHash": "sha256-P8dcnowdWYJs/LHWigTDpqfBIUIiYmyxfDJDuZFJjZA=",
+        "type": "tarball",
+        "url": "https://fastbuild.org/downloads/v1.18/FASTBuild-Linux-x64-v1.18.zip"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://fastbuild.org/downloads/v1.18/FASTBuild-Linux-x64-v1.18.zip"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1765779637,
@@ -18,6 +31,7 @@
     },
     "root": {
       "inputs": {
+        "fastbuild": "fastbuild",
         "nixpkgs": "nixpkgs"
       }
     }
