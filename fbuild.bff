@@ -44,3 +44,8 @@ Library('concurrency-in-action-compdb')
     .LibrarianOptions =  './combine_compile_commands.sh %1 %2'
     .LibrarianOutput = 'compile_commands.json'
 }
+
+Alias('compdb')
+{
+    .Targets = {'concurrency-in-action-compdb'}
+}
