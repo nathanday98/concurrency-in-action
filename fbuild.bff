@@ -1,0 +1,46 @@
+#import NIX_CC
+
+.Compiler = '$NIX_CC$/bin/clang++'
+
+.GlobalCompilerOptions = '"%1" '
+                 + '-c '
+                 + '-g '
+                 + '-std=c++23 '
+
+.CompilerOptions = .GlobalCompilerOptions
+                 + '-o "%2" '
+
+.Linker = '$NIX_CC$/bin/clang++'
+.LinkerOptions = '-o "%2" '
+               + '"%1" '
+               + '-g '
+
+ObjectList('concurrency-in-action-lib')
+{
+    .CompilerInputPath = './src'
+    .CompilerOutputPath = './temp/concurrency-in-action-lib'
+}
+
+Executable('concurrency-in-action-exe')
+{
+    .Libraries = {'concurrency-in-action-lib'}
+    .LinkerOutput = './build/concurrency-in-action'
+}
+
+Alias('all')
+{
+    .Targets = {'concurrency-in-action-exe'}
+}
+
+Library('concurrency-in-action-compdb')
+{
+    .CompilerInputPath = './src'
+    .CompilerOptions = .GlobalCompilerOptions
+                     + '-MJ %2'
+    .CompilerOutputPath = './temp/concurrency-in-action-compdb'
+    .CompilerOutputExtension = '.json'
+
+    .Librarian = '/bin/sh'
+    .LibrarianOptions =  './combine_compile_commands.sh %1 %2'
+    .LibrarianOutput = 'compile_commands.json'
+}

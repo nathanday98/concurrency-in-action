@@ -1,16 +1,18 @@
 {
   "nodes": {
-    "fastbuild": {
-      "flake": false,
+    "fastbuild-bin-overlay": {
       "locked": {
-        "lastModified": 1764411068,
-        "narHash": "sha256-P8dcnowdWYJs/LHWigTDpqfBIUIiYmyxfDJDuZFJjZA=",
-        "type": "tarball",
-        "url": "https://fastbuild.org/downloads/v1.18/FASTBuild-Linux-x64-v1.18.zip"
+        "lastModified": 1766628822,
+        "narHash": "sha256-4BYLxaklnR6mP6nOsIYFYI/pNqzfXJ5E8TqxoGR0Y1o=",
+        "owner": "nathanday98",
+        "repo": "fastbuild-bin-overlay",
+        "rev": "f2fb788ca0bb59d148c812e9685268599c8acf92",
+        "type": "github"
       },
       "original": {
-        "type": "tarball",
-        "url": "https://fastbuild.org/downloads/v1.18/FASTBuild-Linux-x64-v1.18.zip"
+        "owner": "nathanday98",
+        "repo": "fastbuild-bin-overlay",
+        "type": "github"
       }
     },
     "nixpkgs": {
@@ -31,7 +33,7 @@
     },
     "root": {
       "inputs": {
-        "fastbuild": "fastbuild",
+        "fastbuild-bin-overlay": "fastbuild-bin-overlay",
         "nixpkgs": "nixpkgs"
       }
     }

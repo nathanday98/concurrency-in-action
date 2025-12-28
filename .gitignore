@@ -1,0 +1,6 @@
+.cache/clangd/index
+.direnv
+build
+temp
+compile_commands.json
+fbuild.linux.fdb
