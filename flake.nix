@@ -18,7 +18,7 @@
       };
     in
     {
-      devShells.${system}.default = pkgs.mkShell.override { stdenv = pkgs.clangStdenv; } rec {
+      devShells.${system}.default = pkgs.mkShell.override { stdenv = pkgs.clangStdenv; } {
 
         # COMPILER = llvmPkgs.clang;
         # LIBCXX = llvmPkgs.libcxx;

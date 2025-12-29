@@ -1,0 +1,12 @@
+// Project-local debug tasks
+//
+// For more documentation on how to configure debug tasks,
+// see:
+[
+  {
+    "label": "Debug native binary",
+    "program": "$ZED_WORKTREE_ROOT/build/concurrency-in-action",
+    "request": "launch",
+    "adapter": "CodeLLDB"
+  }
+]

@@ -3,6 +3,6 @@
 
 int main()
 {
-    std::vector<int> a{};
     std::print("hey\n");
+    std::vector<int> a{};
 }
