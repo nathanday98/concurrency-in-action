@@ -1,8 +1,10 @@
 #include <print>
-#include <vector>
+#include <thread>
 
 int main()
 {
-    std::print("hey\n");
-    std::vector<int> a{};
+    std::thread thread{[](){
+       std::print("hello from another thread\n");
+    }};
+    thread.join();
 }
